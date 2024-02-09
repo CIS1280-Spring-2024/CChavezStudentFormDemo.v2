@@ -1,4 +1,5 @@
 using StudentForm;
+using System.Diagnostics;
 
 namespace CChavezStudentFormDemo
 {
@@ -75,8 +76,7 @@ namespace CChavezStudentFormDemo
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            System.Diagnostics.Process.Start("IExplore",
-                "http://www.cnm.edu");
+            Process.Start(new ProcessStartInfo("https://www.cnm.edu") { UseShellExecute = true });
             linkLabel1.LinkVisited = true;
         }
     }
